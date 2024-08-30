@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - aigenty
 on:
   push:
     branches:
-      - main
+      - main_old
   workflow_dispatch:
 
 jobs:
