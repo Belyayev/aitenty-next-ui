@@ -8,10 +8,16 @@ const Listings = () => {
 
   useEffect(() => {
     fetch(
-      "http://127.0.0.1:3000/listings?SubType=Apartment&Address_City=Calgary&ArchitecturalStyle=Apartment"
+      "https://aigenty-node.azurewebsites.net/listings?SubType=Apartment&Address_City=Calgary&ArchitecturalStyle=Apartment"
     )
-      .then((response) => response.json())
-      .then((data) => dispatch(setListings(data)));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => dispatch(setListings(data)))
+      .catch((error) => console.error("Fetch error:", error));
   }, [dispatch]);
 
   return (
