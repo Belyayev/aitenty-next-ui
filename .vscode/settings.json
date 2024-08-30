@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/ac2fb659-4fb0-4144-aa09-4a3248464539/resourceGroups/aigenty-portal/providers/Microsoft.Web/sites/aigenty",
+  "appService.deploySubpath": "."
+}
