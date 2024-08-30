@@ -1,15 +1,38 @@
 .card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
   transition: transform 0.2s;
+  background-color: #fff;
 }
 
 .card:hover {
   transform: scale(1.05);
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  padding: 8px 16px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 16px;
 }
 
 .address {
