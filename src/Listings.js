@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setListings } from "./listingsSlice";
+import ListingCard from "./ListingCard";
+import "./styles.css";
 
 const Listings = () => {
   const dispatch = useDispatch();
@@ -23,13 +25,11 @@ const Listings = () => {
   return (
     <div>
       <h1>Listings</h1>
-      <ul>
+      <div className="listings-container">
         {listings.map((listing) => (
-          <li key={listing.id}>
-            {listing.AddressCity} - {listing.ListPrice}
-          </li>
+          <ListingCard key={listing.Id} listing={listing} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
