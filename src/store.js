@@ -6,3 +6,5 @@ export const store = configureStore({
     listings: listingsReducer,
   },
 });
+
+export default store;
